@@ -13,8 +13,8 @@ def Ciclo():
     Archivos = lsExcel()
     if(len(Archivos) > 0):
         Actualizar_Datos(Archivos)
-        consolidadoHortaliza()
-        consolidadoFruta()
+        # consolidadoHortaliza()
+        # consolidadoFruta()
     else:
         print("No hay datos que actualizar")
     print("Ciclo completo")
@@ -35,7 +35,7 @@ def Descargar_Archivos():
         urlBase =  "https://www.odepa.gob.cl/wp-content/uploads/" + annioDescarga + "/" + mesDescarga + "/Boletin_Diario_de_Frutas_y_Hortalizas_"
         fecha = "PrecioFrutaHortalizas/" + (fechaMaxima + datetime.timedelta(days = numero)).strftime("%Y%m%d.xlsx")
         fechaFile = (fechaMaxima + datetime.timedelta(days = numero)).strftime("%Y%m%d.xlsx") 
-        # print(urlBase + fecha)
+        print("AÑOOOO DE DESCARGAAAAAAAAAAAAAA: " + str(urlBase) + str(fecha))
 
         try:
             myfile = requests.get(urlBase + fechaFile)
